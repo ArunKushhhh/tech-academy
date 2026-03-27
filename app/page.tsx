@@ -1,6 +1,10 @@
+import Aurora from "@/components/aurora";
 import Antigravity from "@/components/home/antigravity";
 import CardNav from "@/components/nav";
-import logo from "@/public/logo.svg"
+import logo from "@/public/logo.svg";
+import Hero from "@/sections/hero";
+import Programs from "@/sections/programs";
+import Testimonials from "@/sections/testimonials";
 
 const items = [
   {
@@ -35,7 +39,15 @@ const items = [
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
+      <div className="absolute inset-0 z-0 opacity-80 h-1/2">
+        <Aurora
+          colorStops={["#1447E6", "#3B82F6", "#1447E6"]}
+          amplitude={0.5}
+          blend={0.8}
+          speed={0.5}
+        />
+      </div>
       <CardNav
         logo={logo}
         logoAlt="Tech Academy"
@@ -46,25 +58,11 @@ export default function Home() {
         buttonTextColor="#fff"
         ease="power3.out"
       />
-      <div style={{ width: '100%', height: '100vh', position: 'absolute', zIndex: 0 }}>
-        <Antigravity
-          count={300}
-          magnetRadius={6}
-          ringRadius={7}
-          waveSpeed={0.4}
-          waveAmplitude={1}
-          particleSize={1.5}
-          lerpSpeed={0.05}
-          color="#1447E6"
-          autoAnimate
-          particleVariance={1}
-          rotationSpeed={0}
-          depthFactor={1}
-          pulseSpeed={3}
-          particleShape="capsule"
-          fieldStrength={10}
-        />
+      <div className="px-8 md:px-24 w-full min-h-screen">
+        <Hero />
       </div>
+      <Programs />
+      <Testimonials />
     </div>
   );
 }

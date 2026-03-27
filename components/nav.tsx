@@ -4,6 +4,7 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
+import StarBorder from './star-border';
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 type CardNavLink = {
@@ -164,8 +165,8 @@ const CardNav: React.FC<CardNavProps> = ({
         >
             <nav
                 ref={navRef}
-                className={`card-nav ${isExpanded ? 'open' : ''} block h-[60px] p-0 rounded-xl shadow-md relative overflow-hidden will-change-[height]`}
-                style={{ backgroundColor: baseColor }}
+                className={`card-nav ${isExpanded ? 'open' : ''} block h-[60px] p-0 rounded-xl shadow-md relative overflow-hidden will-change-[height] backdrop-blur-xl border border-white/10`}
+                style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)' }}
             >
                 <div className="card-nav-top absolute inset-x-0 top-0 h-[60px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
                     <div
@@ -190,13 +191,14 @@ const CardNav: React.FC<CardNavProps> = ({
                         <img src={typeof logo === 'string' ? logo : (logo as { src: string }).src} alt={logoAlt} className="logo h-10" />
                     </div>
 
-                    <button
-                        type="button"
-                        className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium cursor-pointer transition-colors duration-300"
-                        style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+                    <StarBorder
+                        as="button"
+                        className="hidden md:inline-flex items-center font-medium cursor-pointer"
+                        color="#1447E6"
+                        speed="5s"
                     >
-                        Get Started
-                    </button>
+                        Join Now
+                    </StarBorder>
                 </div>
 
                 <div
