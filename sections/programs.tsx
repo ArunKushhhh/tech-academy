@@ -2,104 +2,56 @@
 
 import React from "react";
 import SpotlightCard from "@/components/ui/spotlight-card";
-import { FaGraduationCap, FaCode, FaTerminal, FaArrowTrendUp } from "react-icons/fa6";
+import { programsData } from "@/config/programsData";
 
-const programsData = [
-  {
-    icon: <FaGraduationCap className="text-xl text-white" />,
-    title: "School Students",
-    items: ["7th–10th HSC (Maths)", "9th–10th ICSE", "11th–12th CBSE"],
-    buttonText: "View Detail",
-    buttonVariant: "secondary",
-  },
-  {
-    icon: <FaCode className="text-xl text-white" />,
-    title: "Programming",
-    items: [
-      "C / C++ Fundamentals",
-      "Java (Core & Advanced)",
-      "Python & MySQL",
-    ],
-    buttonText: "Join Batch",
-    buttonVariant: "primary", // specialized golden styling
-  },
-  {
-    icon: <FaTerminal className="text-xl text-white" />,
-    title: "Engineering",
-    items: [
-      "Data Structures (DSA)",
-      "Computer Architecture",
-      "Algorithm Design",
-    ],
-    buttonText: "View Detail",
-    buttonVariant: "secondary",
-  },
-  {
-    icon: <FaArrowTrendUp className="text-xl text-white" />,
-    title: "Professionals",
-    items: [
-      "Corporate Upskilling",
-      "Full Stack Development",
-      "Technical Interview Prep",
-    ],
-    buttonText: "Learn More",
-    buttonVariant: "secondary",
-  },
-];
-
-function ProgramCard({ data, isHighlighted }: { data: any; isHighlighted: boolean }) {
-  // Use a subtle brand-blue spotlight
+function ProgramCard({ data }: { data: any; }) {
   return (
     <SpotlightCard
-      spotlightColor="rgba(20, 71, 230, 0.08)"
-      className={`h-full flex flex-col p-8 transition-all duration-300 border ${
-        isHighlighted
-          ? "border-[#1447E6] border-t-4 bg-background shadow-lg shadow-[#1447E6]/10"
-          : "border-border bg-secondary/30 hover:bg-secondary/60 hover:border-border/80"
-      }`}
+      spotlightColor="rgba(0, 229, 255, 0.2)"
+      className="h-full flex flex-col p-8 bg-secondary/50 border border-border hover:bg-secondary transition-colors duration-300"
     >
-      <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-6 ${
-          isHighlighted ? "bg-[#1447E6]/10" : "bg-muted"
-      }`}>
-        {React.cloneElement(data.icon, { 
-            className: `text-xl ${isHighlighted ? "text-[#1447E6]" : "text-muted-foreground"}` 
+      <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-sm mb-6 shrink-0">
+        {React.cloneElement(data.icon, {
+          className: "w-8 h-8 text-primary"
         })}
       </div>
-      
-      <h3 className="text-xl font-bold mb-6 text-foreground">{data.title}</h3>
-      
-      <ul className="flex flex-col gap-4 mb-10 grow">
+
+      <h4 className="text-xl font-bold text-foreground mb-3">{data.title}</h4>
+
+      <ul className="flex flex-col gap-4 mt-3 grow">
         {data.items.map((item: string, idx: number) => (
-          <li key={idx} className="flex items-start gap-3 text-muted-foreground text-sm font-medium">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1447E6] mt-1.5 shrink-0" />
+          <li key={idx} className="flex items-start gap-3 text-muted-foreground leading-relaxed">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
             {item}
           </li>
         ))}
       </ul>
-      
-      <button
-        className={`w-full py-3 px-4 rounded-full font-semibold text-sm transition-all mt-auto border ${
-          isHighlighted
-            ? "bg-[#1447E6] text-white hover:bg-[#1447E6]/90 border-transparent shadow-md" 
-            : "bg-transparent text-foreground hover:bg-secondary border-border"
-        }`}
-      >
-        {data.buttonText}
-      </button>
     </SpotlightCard>
   );
 }
 
 export default function Programs() {
   return (
-    <section className="py-20 md:py-32 w-full max-w-7xl mx-auto px-8 md:px-24">
-      {/* We can place an optional heading here, or just the grid if requested. The image just shows cards. */}
+    <section className=" w-full px-8 md:px-32 flex flex-col gap-16 py-20 md:py-32">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div className="max-w-2xl">
+          <h2 className="text-sm font-semibold text-primary tracking-wider uppercase mb-3">Our Programs</h2>
+          <h3 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground">
+            A program for every ambition.
+          </h3>
+        </div>
+        <p className="text-muted-foreground text-lg md:text-xl max-w-md md:text-right">
+          Whether you're starting from scratch or looking to specialize, we have a path for you.
+        </p>
+      </div>
+
+      {/* Programs Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {programsData.map((prog, idx) => (
-          <ProgramCard 
-            key={idx} 
-            data={prog} 
-            isHighlighted={prog.title === "Programming"} 
+          <ProgramCard
+            key={idx}
+            data={prog}
           />
         ))}
       </div>

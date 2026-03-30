@@ -42,10 +42,10 @@ const items = [
 export default function Home() {
   return (
     <div className="relative">
-      <div className="absolute inset-0 z-0 opacity-80 h-[80vh]">
+      <div className="absolute inset-0 z-0 h-[80vh]">
         <Aurora
-          colorStops={["#185691","#430fff","#4b3db8"]}
-          amplitude={0.5}
+          colorStops={["#66a1ff","#a3a8f0","#2937ff"]}
+          amplitude={0.8}
           blend={0.8}
           speed={0.5}
         />

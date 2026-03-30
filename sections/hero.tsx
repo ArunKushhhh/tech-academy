@@ -1,9 +1,9 @@
 "use client";
 
-import Aurora from "@/components/aurora";
-import CircularText from "@/components/home/circular-text";
-import SplitText from "@/components/split-text";
-import StarBorder from "@/components/star-border";
+import Aurora from "@/components/ui/aurora";
+import CircularText from "@/components/ui/circular-text";
+import SplitText from "@/components/ui/split-text";
+import StarBorder from "@/components/ui/star-border";
 import { IoLocationSharp } from "react-icons/io5";
 
 export default function Hero() {
@@ -11,8 +11,8 @@ export default function Hero() {
         console.log('');
     };
     return (
-        <div className="w-full min-h-screen relative flex items-end justify-start z-10 gap-4 pb-24">
-            <div className="absolute top-1/4 -translate-y-1/2 right-12 z-10">
+        <div className="w-full min-h-screen relative flex items-end justify-start z-10 gap-4 pb-24 px-8 md:px-32">
+            <div className="absolute top-1/4 -translate-y-1/2 right-32 z-10">
                 <CircularText
                     text="TECH*ACADEMY*TECH*ACADEMY*"
                     onHover="speedUp"

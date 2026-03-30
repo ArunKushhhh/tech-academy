@@ -62,7 +62,7 @@ const testimonials: Testimonial[] = [
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="flex-shrink-0 w-[350px] md:w-[460px] bg-secondary/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 flex flex-col gap-4">
+    <div className="shrink-0 w-[350px] md:w-[460px] bg-secondary/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 flex flex-col gap-4">
       <p className="text-[15px] leading-relaxed text-foreground/80">
         &ldquo;{testimonial.quote}&rdquo;
       </p>
@@ -123,7 +123,7 @@ export default function Testimonials() {
         }
       `}</style>
       <section className="py-20 md:py-32 overflow-hidden">
-        <div className="px-8 md:px-24 mb-12">
+        <div className="px-8 md:px-32 mb-12">
           <h2 className="text-3xl md:text-5xl font-extrabold">
             Loved by students & parents
           </h2>

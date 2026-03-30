@@ -117,7 +117,7 @@ const ExperienceCard = ({
           >
             <h3 className="text-base font-semibold uppercase tracking-wider">{role}</h3>
             <div className="flex w-full justify-between items-center mt-1">
-              <p className="text-sm font-medium text-muted-foreground  sm:pr-0 pr-2 group-hover:text-[#1447E6] transition-colors">
+              <p className="text-sm font-medium text-muted-foreground sm:pr-0 pr-2 group-hover:text-[#1447E6] transition-colors">
                 {companyName}
               </p>
               <div className="grow border-b border-dashed border-border/60 mx-4" />
@@ -126,7 +126,7 @@ const ExperienceCard = ({
               </p>
             </div>
           </div>
-          
+
           <AnimatePresence initial={false}>
             {isOpen && hasDescription && (
               <motion.div

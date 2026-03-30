@@ -6,8 +6,8 @@ A structured plan to transform the existing static Next.js skeleton into a fully
 
 ## Phases
 
-- [ ] **Phase 1: Educator & Hero Experience** - Establish the visual hook and educator profile
-- [ ] **Phase 2: Catalog & Philosophy** - Build out the courses and academy context
+- [x] **Phase 1: Educator & Hero Experience** - Establish the visual hook and educator profile
+- [x] **Phase 2: Catalog & Philosophy** - Build out the courses and academy context
 - [ ] **Phase 3: Conversion & UX Optimization** - Implement contact form and finalize single-page navigation
 
 ## Phase Details
