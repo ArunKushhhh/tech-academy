@@ -4,13 +4,14 @@
 
 ### Landing & Conversion
 - [ ] **CONV-01**: Present a clear Value Proposition in the Hero section.
-- [ ] **CONV-02**: Implement a fully functional Contact Form directed to the educator (via Web3Forms or Resend).
-- [ ] **CONV-03**: Display a sticky or highly visible Call-To-Action (CTA) throughout the page.
+- [ ] **CONV-02**: Implement a fully functional Contact Form directed to the single educator (via Web3Forms or Resend).
+- [ ] **CONV-03**: Display a sticky or highly visible Call-To-Action (CTA) throughout the page leading to the contact form.
 
 ### Information Architecture
-- [ ] **INFO-01**: Display a Course Catalog describing available programs.
-- [ ] **INFO-02**: Provide an "About Us" / Academy Philosophy section.
-- [ ] **INFO-03**: Showcase Testimonials or social proof.
+- [ ] **INFO-01**: Display an Educator Profile section immediately below the Hero section, highlighting the academy's single educator.
+- [ ] **INFO-02**: Display a Course Catalog describing available programs.
+- [ ] **INFO-03**: Provide an "About Us" / Academy Philosophy section.
+- [ ] **INFO-04**: Showcase Testimonials or social proof.
 
 ### Technical & UX
 - [ ] **UX-01**: Implement smooth scrolling for all anchor links across the single-page layout.
