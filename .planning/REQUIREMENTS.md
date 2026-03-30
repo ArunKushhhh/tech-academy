@@ -28,3 +28,13 @@
 
 ## Traceability
 <!-- Filled during roadmap creation -->
+- CONV-01: Phase 1
+- CONV-02: Phase 3
+- CONV-03: Phase 3
+- INFO-01: Phase 1
+- INFO-02: Phase 2
+- INFO-03: Phase 2
+- INFO-04: Phase 2
+- UX-01: Phase 3
+- UX-02: Phase 3
+- UX-03: Phase 3
