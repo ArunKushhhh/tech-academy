@@ -1,9 +1,10 @@
 import Aurora from "@/components/aurora";
-import Antigravity from "@/components/home/antigravity";
 import CardNav from "@/components/nav";
 import logo from "@/public/logo.svg";
 import Hero from "@/sections/hero";
+import Educator from "@/sections/educator";
 import Programs from "@/sections/programs";
+import Footer from "@/sections/footer";
 import Testimonials from "@/sections/testimonials";
 
 const items = [
@@ -58,11 +59,13 @@ export default function Home() {
         buttonTextColor="#fff"
         ease="power3.out"
       />
-      <div className="px-8 md:px-24 w-full min-h-screen">
+      <div className="px-8 md:px-24 w-full min-h-[90vh] flex flex-col justify-end">
         <Hero />
       </div>
+      <Educator />
       <Programs />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
