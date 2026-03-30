@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SpotlightCard from "@/components/spotlight-card";
+import SpotlightCard from "@/components/ui/spotlight-card";
 import { FaGraduationCap, FaCode, FaTerminal, FaArrowTrendUp } from "react-icons/fa6";
 
 const programsData = [
@@ -48,35 +48,40 @@ const programsData = [
 ];
 
 function ProgramCard({ data, isHighlighted }: { data: any; isHighlighted: boolean }) {
+  // Use a subtle brand-blue spotlight
   return (
     <SpotlightCard
-      spotlightColor="rgba(255, 255, 255, 0.15)" // softer white spotlight
-      className={`h-full flex flex-col p-8 transition-colors duration-300 ${
+      spotlightColor="rgba(20, 71, 230, 0.08)"
+      className={`h-full flex flex-col p-8 transition-all duration-300 border ${
         isHighlighted
-          ? "border-[#1447E6] border-t-4 bg-white/5 backdrop-blur-sm"
-          : "border-white/10 bg-white/5 backdrop-blur-sm"
+          ? "border-[#1447E6] border-t-4 bg-background shadow-lg shadow-[#1447E6]/10"
+          : "border-border bg-secondary/30 hover:bg-secondary/60 hover:border-border/80"
       }`}
     >
-      <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
-        {data.icon}
+      <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-6 ${
+          isHighlighted ? "bg-[#1447E6]/10" : "bg-muted"
+      }`}>
+        {React.cloneElement(data.icon, { 
+            className: `text-xl ${isHighlighted ? "text-[#1447E6]" : "text-muted-foreground"}` 
+        })}
       </div>
       
       <h3 className="text-xl font-bold mb-6 text-foreground">{data.title}</h3>
       
-      <ul className="flex flex-col gap-4 mb-10 flex-grow">
+      <ul className="flex flex-col gap-4 mb-10 grow">
         {data.items.map((item: string, idx: number) => (
-          <li key={idx} className="flex items-start gap-3 text-muted-foreground text-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1447E6] mt-1.5 flex-shrink-0" />
+          <li key={idx} className="flex items-start gap-3 text-muted-foreground text-sm font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1447E6] mt-1.5 shrink-0" />
             {item}
           </li>
         ))}
       </ul>
       
       <button
-        className={`w-full py-3 px-4 rounded-full font-medium text-sm transition-colors mt-auto border ${
+        className={`w-full py-3 px-4 rounded-full font-semibold text-sm transition-all mt-auto border ${
           isHighlighted
-            ? "bg-[#1447E6] text-white hover:bg-blue-600 border-transparent" 
-            : "bg-transparent text-foreground hover:bg-white/10 border-white/20"
+            ? "bg-[#1447E6] text-white hover:bg-[#1447E6]/90 border-transparent shadow-md" 
+            : "bg-transparent text-foreground hover:bg-secondary border-border"
         }`}
       >
         {data.buttonText}

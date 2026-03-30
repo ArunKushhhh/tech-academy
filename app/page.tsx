@@ -1,9 +1,10 @@
-import Aurora from "@/components/aurora";
+import Aurora from "@/components/ui/aurora";
 import CardNav from "@/components/nav";
 import logo from "@/public/logo.svg";
 import Hero from "@/sections/hero";
 import Educator from "@/sections/educator";
 import Programs from "@/sections/programs";
+import Philosophy from "@/sections/philosophy";
 import Footer from "@/sections/footer";
 import Testimonials from "@/sections/testimonials";
 
@@ -41,9 +42,9 @@ const items = [
 export default function Home() {
   return (
     <div className="relative">
-      <div className="absolute inset-0 z-0 opacity-80 h-1/2">
+      <div className="absolute inset-0 z-0 opacity-80 h-[80vh]">
         <Aurora
-          colorStops={["#1447E6", "#3B82F6", "#1447E6"]}
+          colorStops={["#185691","#430fff","#4b3db8"]}
           amplitude={0.5}
           blend={0.8}
           speed={0.5}
@@ -59,10 +60,9 @@ export default function Home() {
         buttonTextColor="#fff"
         ease="power3.out"
       />
-      <div className="px-8 md:px-24 w-full min-h-[90vh] flex flex-col justify-end">
-        <Hero />
-      </div>
+      <Hero />
       <Educator />
+      <Philosophy />
       <Programs />
       <Testimonials />
       <Footer />
