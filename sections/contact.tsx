@@ -20,51 +20,6 @@ interface FormErrors {
   message?: string;
 }
 
-const WorldMap = () => (
-  <div className="relative w-full h-[180px] rounded-xl overflow-hidden bg-gray-100 mt-6">
-    {/* Simplified world map — continent outlines */}
-    <svg
-      viewBox="0 0 1000 500"
-      className="absolute inset-0 w-full h-full opacity-[0.15]"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      {/* North America */}
-      <path d="M120,80 L180,60 L240,70 L260,120 L230,160 L200,180 L170,200 L140,220 L110,210 L90,180 L80,140 L100,100 Z" />
-      {/* South America */}
-      <path d="M190,240 L240,230 L270,260 L280,310 L270,370 L250,400 L220,420 L190,400 L170,360 L160,310 L170,260 Z" />
-      {/* Europe */}
-      <path d="M440,60 L490,50 L520,70 L510,100 L480,120 L450,110 L430,90 Z" />
-      {/* Africa */}
-      <path d="M440,140 L490,130 L530,150 L550,200 L540,270 L510,320 L470,340 L440,320 L410,270 L410,200 L430,160 Z" />
-      {/* Asia (mainland) */}
-      <path d="M530,50 L700,40 L800,60 L820,100 L780,140 L720,150 L660,160 L600,150 L560,120 L520,90 Z" />
-      {/* India subcontinent */}
-      <path d="M590,140 L630,135 L650,165 L640,210 L610,230 L585,210 L575,170 Z" />
-      {/* Southeast Asia */}
-      <path d="M720,160 L770,155 L790,185 L760,210 L730,200 L710,180 Z" />
-      {/* Australia */}
-      <path d="M720,280 L790,260 L840,280 L860,330 L820,370 L760,380 L710,360 L690,320 Z" />
-    </svg>
-
-    {/* Pune pin — 18.52°N 73.86°E → approx 63% left, 46% top on equirectangular */}
-    <div className="absolute top-[46%] left-[63%] -translate-x-1/2 -translate-y-1/2">
-      {/* Pulse ring */}
-      <div className="absolute w-5 h-5 bg-blue-500/30 rounded-full animate-ping -translate-x-1/2 -translate-y-1/2" />
-      {/* Pin dot */}
-      <div className="relative w-3 h-3 bg-blue-600 rounded-full ring-2 ring-white shadow-md" />
-    </div>
-
-    {/* "We are here" label */}
-    <div className="absolute top-[28%] left-[60%] flex flex-col items-center pointer-events-none">
-      <span className="bg-gray-900 text-white text-xs px-2.5 py-1 rounded-full whitespace-nowrap shadow-sm">
-        We are here
-      </span>
-      <div className="w-px h-5 bg-gray-500/60 mt-0.5" />
-    </div>
-  </div>
-);
-
 export default function Contact() {
   const [formState, setFormState] = useState<FormState>("idle");
   const [formData, setFormData] = useState<FormData>({
@@ -136,9 +91,6 @@ export default function Contact() {
       id="contact"
       className="w-full py-16 px-8 md:px-16 lg:px-32 scroll-mt-20"
     >
-      {/* Section divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-16" />
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start max-w-6xl mx-auto">
         {/* Left Column */}
         <div className="flex flex-col gap-6">
@@ -151,7 +103,7 @@ export default function Contact() {
             <h2 className="text-4xl font-bold text-gray-900 mb-3">
               Contact us
             </h2>
-            <p className="text-gray-500 text-base leading-relaxed max-w-xs">
+            <p className="text-gray-500 text-base leading-relaxed max-w-s">
               Have a question about our programs? We&apos;d love to hear from
               you. Reach out and we&apos;ll get back to you shortly.
             </p>
@@ -159,11 +111,9 @@ export default function Contact() {
 
           <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500">
             <span>info@techacademy.in</span>
-            <span className="text-gray-300">•</span>
+            <span className="text-primary">•</span>
             <span>+91 98765 43210</span>
           </div>
-
-          <WorldMap />
         </div>
 
         {/* Right Column — Form Card */}
