@@ -122,7 +122,7 @@ export default function Testimonials() {
           100% { transform: translateX(0); }
         }
       `}</style>
-      <section className="py-20 md:py-32 overflow-hidden">
+      <section id="testimonials" className="py-20 md:py-32 overflow-hidden scroll-mt-20">
         <div className="px-8 md:px-32 mb-12">
           <h2 className="text-3xl md:text-5xl font-extrabold">
             Loved by students & parents

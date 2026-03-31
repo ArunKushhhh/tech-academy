@@ -4,7 +4,7 @@ import Experience from "@/components/experience";
 
 export default function Educator() {
     return (
-        <section className="w-full py-24 px-8 md:px-32 z-20 relative">
+        <section id="educator" className="w-full py-24 px-8 md:px-32 z-20 relative scroll-mt-20">
             <div className="flex flex-col lg:flex-row gap-16 items-start">
 
                 {/* Photo Column */}

@@ -5,7 +5,7 @@ import { philosophyData } from "@/config/philosophyData";
 
 export default function Philosophy() {
   return (
-    <section className="py-20 md:py-32 w-full px-8 md:px-32">
+    <section id="about" className="py-20 md:py-32 w-full px-8 md:px-32 scroll-mt-20">
       <div className="flex flex-col gap-16">     
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">

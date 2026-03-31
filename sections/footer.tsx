@@ -15,10 +15,7 @@ const navLinks = [
   { label: "Programs", href: "#programs" },
   { label: "About", href: "#about" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Blog", href: "#blog" },
-  { label: "Privacy", href: "#privacy" },
-  { label: "Terms", href: "#terms" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const socialLinks = [

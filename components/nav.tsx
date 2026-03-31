@@ -192,12 +192,13 @@ const CardNav: React.FC<CardNavProps> = ({
                     </div>
 
                     <StarBorder
-                        as="button"
+                        as="a"
+                        href="#contact"
                         className="hidden md:inline-flex items-center font-medium cursor-pointer"
                         color="#1447E6"
                         speed="5s"
                     >
-                        Join Now
+                        Contact Us
                     </StarBorder>
                 </div>
 

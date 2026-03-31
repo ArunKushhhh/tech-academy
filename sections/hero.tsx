@@ -11,7 +11,7 @@ export default function Hero() {
         console.log('');
     };
     return (
-        <div className="w-full min-h-screen relative flex items-end justify-start z-10 gap-4 pb-24 px-8 md:px-32">
+        <div id="hero" className="w-full min-h-screen relative flex items-end justify-start z-10 gap-4 pb-24 px-8 md:px-32 scroll-mt-20">
             <div className="absolute top-1/4 -translate-y-1/2 right-32 z-10">
                 <CircularText
                     text="TECH*ACADEMY*TECH*ACADEMY*"
@@ -43,11 +43,12 @@ export default function Hero() {
                 </p>
                 <div className="flex items-center gap-4">
                     <StarBorder
-                        as="button"
+                        as="a"
+                        href="#contact"
                         color="#1447E6"
                         speed="5s"
                     >
-                        Join Now
+                        Contact Us
                     </StarBorder>
                     <span
                         className="inline-flex items-center gap-2 bg-[#E8EFFD] text-[#1447E6] rounded-full px-[26px] py-[10px] font-medium text-base border border-[#C5D5F9]"

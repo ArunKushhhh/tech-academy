@@ -32,7 +32,7 @@ function ProgramCard({ data }: { data: any; }) {
 
 export default function Programs() {
   return (
-    <section className=" w-full px-8 md:px-32 flex flex-col gap-16 py-20 md:py-32">
+    <section id="programs" className=" w-full px-8 md:px-32 flex flex-col gap-16 py-20 md:py-32 scroll-mt-20">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div className="max-w-2xl">

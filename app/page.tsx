@@ -7,34 +7,34 @@ import Programs from "@/sections/programs";
 import Philosophy from "@/sections/philosophy";
 import Footer from "@/sections/footer";
 import Testimonials from "@/sections/testimonials";
+import Contact from "@/sections/contact";
 
 const items = [
   {
-    label: "About",
+    label: "Educator",
     bgColor: "#0D0716",
     textColor: "#fff",
     links: [
-      { label: "Company", href: "#", ariaLabel: "About Company" },
-      { label: "Careers", href: "#", ariaLabel: "About Careers" }
+      { label: "Profile", href: "#educator", ariaLabel: "Educator Profile" }
     ]
   },
   {
-    label: "Projects",
+    label: "Programs",
     bgColor: "#170D27",
     textColor: "#fff",
     links: [
-      { label: "Featured", href: "#", ariaLabel: "Featured Projects" },
-      { label: "Case Studies", href: "#", ariaLabel: "Project Case Studies" }
+      { label: "School Students", href: "#programs", ariaLabel: "Programs for School Students" },
+      { label: "Engineering", href: "#programs", ariaLabel: "Programs for Engineering Students" },
+      { label: "Programming", href: "#programs", ariaLabel: "Programming Programs" },
+      { label: "Professionals", href: "#programs", ariaLabel: "Programs for Professionals" }
     ]
   },
   {
-    label: "Contact",
+    label: "Testimonials",
     bgColor: "#271E37",
     textColor: "#fff",
     links: [
-      { label: "Email", href: "#", ariaLabel: "Email us" },
-      { label: "Twitter", href: "#", ariaLabel: "Twitter" },
-      { label: "LinkedIn", href: "#", ariaLabel: "LinkedIn" }
+      { label: "Testimonials", href: "#testimonials", ariaLabel: "Student Testimonials" }
     ]
   }
 ];
@@ -65,6 +65,7 @@ export default function Home() {
       <Philosophy />
       <Programs />
       <Testimonials />
+      <Contact />
       <Footer />
     </div>
   );
