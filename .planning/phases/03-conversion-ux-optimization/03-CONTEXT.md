@@ -39,7 +39,7 @@ Wire up the contact form to capture leads via EmailJS, implement smooth single-p
   - **Right column:** A form with fields: Full Name, Email Address, Company (optional), Message (textarea), and a Submit button.
 - **D-10:** Form fields: Full Name (required), Email Address (required), Company (optional), Message (required).
 - **D-11:** Submit button uses the `StarBorder` component for styling.
-- **D-12:** Dark card/glassmorphism background consistent with the existing premium aesthetic.
+- **D-12:** **Light theme** — the contact section must match the site's existing light theme (white/light backgrounds, dark text, subtle borders). Do NOT use the dark glassmorphism style.
 - **D-13:** Success state: show a confirmation message after submission (e.g., "Thanks! We'll be in touch soon.").
 
 ### Form Submission Service
@@ -108,7 +108,7 @@ Wire up the contact form to capture leads via EmailJS, implement smooth single-p
 - All section files (`hero.tsx`, `educator.tsx`, etc.) — Need `id` prop added at the root element.
 
 ### Established Patterns
-- Dark glassmorphism with `backdrop-blur`, `bg-white/10`, `border-white/10` — matches nav card style.
+- The site uses a **light theme** — contact section should use light backgrounds (e.g., `bg-white`, `bg-gray-50`), dark text, and subtle grey borders. Do NOT use dark glassmorphism for this section.
 - GSAP animations used in nav — keep contact section animation lightweight (Motion `useInView` or simple CSS).
 - Tailwind v4 utility-first — all styling via className, no inline styles except where GSAP requires.
 - `"use client"` directive required for any component using hooks, event handlers, or EmailJS.
